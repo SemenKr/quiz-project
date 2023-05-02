@@ -1,179 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+	<title>Quiz</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «NEW_PROJECT_NAME»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «NEW_PROJECT_NAME»</h1>
-		<div class="rootpage__info">
-			Описание проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад хорошему отклику.</p>
-			<p>Обращайтесь ещё!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:samkrekotyn@gmail.com">samkrekotyn@gmail.com</a></p>
-			<p>Телефон: <a href="tel:89215841854">+7 921 584 18 54</a></p>
-			<p>Соц. сеть: <a href="https://t.me/SemenKrekotun">Telegram</a></p>
-		</div>
+	<div class="wrapper">
+		<main class="page">
+			<div class="page__container">
+				<div class="page__about about">
+					<h1 class="about__title">Подберём вуз мечты</h1>
+					<p class="about__description">about bla</p>
+					<img src="@img/quiz-img.png" alt="img">
+				</div>
+				<div class="page__quiz quiz hidden" id="quiz">
+					<h3 class="quiz__title">Вопрос</h3>
+					<div class="quiz__total"></div>
+					<div class="quiz__content">
+						<div class="quiz__list">
+
+
+
+						</div>
+					</div>
+					<div class="quiz__controls">
+						<button type="button" class="quiz__prev-btn" disabled>Back</button>
+						<button type="button" class="quiz__next-btn" disabled>Next</button>
+					</div>
+				</div>
+			</div>
+			<div class="warning hidden">
+				<p>Ops something go wrong</p>
+			</div>
+		</main>
 	</div>
+	@@include('html/_js.htm',{})
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #ffffff;
-		background-color: #000000;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #e5e5e5
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #bebebe;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #e5e5e5;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #e5e5e5;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #14213d;
-
-	}
-
-	.rootpage__contacts a {
-		color: #e5e5e5;
-	}
-
-	.rootpage__tnx {
-		background: #fca311;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>
